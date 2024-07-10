@@ -135,8 +135,8 @@ var
  maxPuntaje,minPuntaje: integer; 
  v: vector_puntaje;
 begin
-  maxPuntaje:= 0;
-  minPuntaje:= 0;
+  maxNivel:= 0;
+  minNivel:= 0;
   inicializarVector(v);
   while(L <> nil) do begin
     v[L^.dato.nivel]:= v[L^.dato.nivel] + L^.dato.puntaje;
