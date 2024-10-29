@@ -108,9 +108,7 @@ begin
   cantPiezasCumplen:= 0;
   while (L <> nil) do begin
     masBaratos[modelo]:= masBaratos[modelo] + L^.dato.costo;
-    actualizarMinimos(masBaratos,minModelo1,minModelo2);
-    cantPiezasTotal:= cantPiezasTotal + 1;
-    if(cumple(L^.dato.codModelo,L^.dato.codPieza)) then
+cantPiezasTotal:= cantPiezasTotal + 1;   if(cumple(L^.dato.codModelo,L^.dato.codPieza)) then
       cantPiezasCumplen:= cantPiezasCumplen + 1;
     
     if(L^.dato.cantStock >)
@@ -118,6 +116,7 @@ begin
 
     L:= L^.sig;
   end;
+actualizarMinimos(masBaratos,minModelo1,minModelo2); 
 writeln(minModelo1,minModelo2);
 writeln(cantPiezasCumplen/cantPiezasTotal);
 writeln('Codigo: ')
